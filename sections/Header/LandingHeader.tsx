@@ -12,13 +12,13 @@ export interface Props {
   
 export default function LandingHeader({ items, headerLogo }: Props) {
   return (
-    <header className="h-[96px] p-[35px]">
+    <header className="h-[96px]">
       <img 
         src={headerLogo} 
-        className="w-[152px] h-[31px] float-left"
+        className="w-[152px] h-[31px] float-left mt-[30px]"
       />
-      <nav>
-        <ul className="flex gap-8 float-right">
+      <nav className="float-right">
+        <ul className="flex gap-8 h-[96px] items-center">
           {items.map(
             navItem => <li>
               <a href={navItem.href}>
@@ -27,9 +27,16 @@ export default function LandingHeader({ items, headerLogo }: Props) {
             </li>
           )}
           <li>
-            <a href="test">
-              IR PARA O SITE
-            </a>
+            <div className="p-[2px] bg-gradient-to-b from-pink-600 to-purple-600 rounded-[6px]">
+              <div className="p-[8px] px-[24px]  bg-white rounded-[4px]">
+                <a 
+                  href="test"
+                  className="rounded-lg"
+                >
+                  IR PARA O SITE
+                </a>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
