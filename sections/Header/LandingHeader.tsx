@@ -1,3 +1,5 @@
+import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
+
 export interface navItem {
   item: string;
   href: string;
@@ -5,20 +7,32 @@ export interface navItem {
 
 export interface Props {
     items: navItem[];
+    headerLogo?: LiveImage;
 }
   
-export default function LandingHeader({ items }: Props) {
+export default function LandingHeader({ items, headerLogo }: Props) {
   return (
-    <div>
+    <header className="h-[96px] p-[35px]">
+      <img 
+        src={headerLogo} 
+        className="w-[152px] h-[31px] float-left"
+      />
       <nav>
-        <ul>
-          {items.map(navItem => <li>
-            <a href={navItem.href}>
-              {navItem.item}
+        <ul className="flex gap-8 float-right">
+          {items.map(
+            navItem => <li>
+              <a href={navItem.href}>
+                {navItem.item}
+              </a>
+            </li>
+          )}
+          <li>
+            <a href="test">
+              IR PARA O SITE
             </a>
-          </li>)}
+          </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
