@@ -18,16 +18,17 @@ import * as $$$$$$11 from "./sections/Social/WhatsApp.tsx";
 import * as $$$$$$12 from "./sections/Theme/Theme.tsx";
 import * as $$$$$$13 from "./sections/Content/Faq.tsx";
 import * as $$$$$$14 from "./sections/Content/Footer.tsx";
-import * as $$$$$$15 from "./sections/Content/Benefits.tsx";
-import * as $$$$$$16 from "./sections/Content/Logos.tsx";
-import * as $$$$$$17 from "./sections/Content/Testimonials.tsx";
-import * as $$$$$$18 from "./sections/Header/Header.tsx";
-import * as $$$$$$19 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$20 from "./sections/Images/Carousel.tsx";
-import * as $$$$$$21 from "./sections/Images/ImageGallery.tsx";
-import * as $$$$$$22 from "./sections/Images/BannerGrid.tsx";
-import * as $$$$$$23 from "./sections/Category/CategoryList.tsx";
-import * as $$$$$$24 from "./sections/Category/CategoryBanner.tsx";
+import * as $$$$$$15 from "./sections/Content/NewsLetter.tsx";
+import * as $$$$$$16 from "./sections/Content/Benefits.tsx";
+import * as $$$$$$17 from "./sections/Content/Logos.tsx";
+import * as $$$$$$18 from "./sections/Content/Testimonials.tsx";
+import * as $$$$$$19 from "./sections/Header/Header.tsx";
+import * as $$$$$$20 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$21 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$22 from "./sections/Images/ImageGallery.tsx";
+import * as $$$$$$23 from "./sections/Images/BannerGrid.tsx";
+import * as $$$$$$24 from "./sections/Category/CategoryList.tsx";
+import * as $$$$$$25 from "./sections/Category/CategoryBanner.tsx";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 
@@ -36,19 +37,20 @@ const manifest = {
     "deco-sites/black-friday-lp/loaders/Layouts/ProductCard.tsx": $$$0,
   },
   "sections": {
-    "deco-sites/black-friday-lp/sections/Category/CategoryBanner.tsx": $$$$$$24,
-    "deco-sites/black-friday-lp/sections/Category/CategoryList.tsx": $$$$$$23,
-    "deco-sites/black-friday-lp/sections/Content/Benefits.tsx": $$$$$$15,
+    "deco-sites/black-friday-lp/sections/Category/CategoryBanner.tsx": $$$$$$25,
+    "deco-sites/black-friday-lp/sections/Category/CategoryList.tsx": $$$$$$24,
+    "deco-sites/black-friday-lp/sections/Content/Benefits.tsx": $$$$$$16,
     "deco-sites/black-friday-lp/sections/Content/Faq.tsx": $$$$$$13,
     "deco-sites/black-friday-lp/sections/Content/Footer.tsx": $$$$$$14,
-    "deco-sites/black-friday-lp/sections/Content/Logos.tsx": $$$$$$16,
-    "deco-sites/black-friday-lp/sections/Content/Testimonials.tsx": $$$$$$17,
+    "deco-sites/black-friday-lp/sections/Content/Logos.tsx": $$$$$$17,
+    "deco-sites/black-friday-lp/sections/Content/NewsLetter.tsx": $$$$$$15,
+    "deco-sites/black-friday-lp/sections/Content/Testimonials.tsx": $$$$$$18,
     "deco-sites/black-friday-lp/sections/Footer/Footer.tsx": $$$$$$0,
-    "deco-sites/black-friday-lp/sections/Header/Header.tsx": $$$$$$18,
-    "deco-sites/black-friday-lp/sections/Images/BannerGrid.tsx": $$$$$$22,
-    "deco-sites/black-friday-lp/sections/Images/Carousel.tsx": $$$$$$20,
-    "deco-sites/black-friday-lp/sections/Images/ImageGallery.tsx": $$$$$$21,
-    "deco-sites/black-friday-lp/sections/Images/ShoppableBanner.tsx": $$$$$$19,
+    "deco-sites/black-friday-lp/sections/Header/Header.tsx": $$$$$$19,
+    "deco-sites/black-friday-lp/sections/Images/BannerGrid.tsx": $$$$$$23,
+    "deco-sites/black-friday-lp/sections/Images/Carousel.tsx": $$$$$$21,
+    "deco-sites/black-friday-lp/sections/Images/ImageGallery.tsx": $$$$$$22,
+    "deco-sites/black-friday-lp/sections/Images/ShoppableBanner.tsx": $$$$$$20,
     "deco-sites/black-friday-lp/sections/Links/LinkTree.tsx": $$$$$$7,
     "deco-sites/black-friday-lp/sections/Links/Shortcuts.tsx": $$$$$$8,
     "deco-sites/black-friday-lp/sections/Miscellaneous/CampaignTimer.tsx":
