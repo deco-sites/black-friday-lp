@@ -47,7 +47,7 @@ function Navbar({ items, searchbar, logo }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
+      <div class="hidden md:flex flex-row justify-between items-center m-auto mt-3 w-11/12">
         <div class="flex-none w-44">
           {logo && (
             <a
@@ -59,10 +59,26 @@ function Navbar({ items, searchbar, logo }: {
             </a>
           )}
         </div>
-        <div class="flex-auto flex justify-center">
+        <div class="flex-auto flex justify-end">
           {items.map((item) => <NavItem item={item} />)}
+          <div className="p-[2px] bg-gradient-to-b from-pink-600 to-purple-600 rounded-[6px]">
+            <div className="p-[10px] px-[24px] rounded-[4px] bg-white">
+              <a 
+                href="test"
+                className="rounded-lg"
+              >
+                IR PARA O SITE
+              </a>
+            </div>
+          </div>
+          <div className="ml-4 pt-2">
+            {platform === "vtex" && <CartButtonVTEX />}
+            {platform === "vnda" && <CartButtonVDNA />}
+            {platform === "wake" && <CartButtonWake />}
+            {platform === "shopify" && <CartButtonShopify />}
+          </div>
         </div>
-        <div class="flex-none w-44 flex items-center justify-end gap-2">
+        {/* <div class="flex-none w-44 flex items-center justify-end gap-2">
           <SearchButton />
           <Searchbar searchbar={searchbar} />
           <a
@@ -88,7 +104,7 @@ function Navbar({ items, searchbar, logo }: {
           {platform === "vnda" && <CartButtonVDNA />}
           {platform === "wake" && <CartButtonWake />}
           {platform === "shopify" && <CartButtonShopify />}
-        </div>
+        </div> */}
       </div>
     </>
   );

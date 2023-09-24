@@ -8,7 +8,7 @@ export interface Props {
 function MenuItem({ item }: { item: INavItem }) {
   return (
     <div class="collapse collapse-plus">
-      <input type="checkbox" />
+      {/* <input type="checkbox" />
       <div class="collapse-title">{item.label}</div>
       <div class="collapse-content">
         <ul>
@@ -21,7 +21,8 @@ function MenuItem({ item }: { item: INavItem }) {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
+      <a class="p-5" href={item.href}>{item.label}</a>
     </div>
   );
 }

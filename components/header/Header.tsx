@@ -6,6 +6,7 @@ import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
+import Layout from "$store/components/LandingPage/Layout.tsx";
 
 export interface NavItem {
   label: string;
@@ -47,6 +48,14 @@ export interface Props {
 
   /** @title Logo */
   logo?: { src: ImageWidget; alt: string };
+  /**
+    * @format color
+    */
+  backgroundColor: string;
+  /**
+    * @format color
+    */
+  textColor: string;
 }
 
 function Header({
@@ -69,7 +78,7 @@ function Header({
           platform={platform}
         >
           <div class="bg-base-100 fixed w-full z-50">
-            <Alert alerts={alerts} />
+            {/* <Alert alerts={alerts} /> */}
             <Navbar items={navItems} searchbar={searchbar} logo={logo} />
           </div>
         </Drawers>
