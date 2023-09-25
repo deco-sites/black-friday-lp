@@ -1,6 +1,8 @@
 import Layout from "$store/components/LandingPage/Layout.tsx";
+import Image from "apps/website/components/Image.tsx";
 
 export interface Props {
+  title: string;
   /**
    * @format color
    */
@@ -11,10 +13,12 @@ export interface Props {
   textColor: string;
 }
 
-export default function MainBanner({backgroundColor, textColor}: Props) {
+export default function MainBanner({backgroundColor, textColor, title}: Props) {
   return (
     <Layout backgroundColor={backgroundColor} textColor={textColor}>
-      <h1>Teste</h1>
+      <h1 className="text-5xl font-semibold">
+        {title}
+      </h1>
     </Layout>
   );
 }
