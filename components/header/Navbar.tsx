@@ -41,7 +41,7 @@ function Navbar({ items, searchbar, logo, irParaOSite }: {
         )}
 
         <div class="flex gap-1">
-          <SearchButton />
+          {/* <SearchButton /> */}
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
         </div>
