@@ -3,6 +3,7 @@ import Image from "apps/website/components/Image.tsx";
 
 export interface Props {
   title: string;
+  caption?: string;
   /**
    * @format color
    */
@@ -13,9 +14,12 @@ export interface Props {
   textColor: string;
 }
 
-export default function MainBanner({backgroundColor, textColor, title}: Props) {
+export default function MainBanner({backgroundColor, textColor, title, caption}: Props) {
   return (
     <Layout backgroundColor={backgroundColor} textColor={textColor}>
+      <h2 className="text-base font-bold h-5 text-transparent bg-clip-text bg-gradient-to-b from-pink-500 to bg-purple-600">
+        {caption}
+      </h2>
       <h1 className="text-5xl font-semibold">
         {title}
       </h1>
