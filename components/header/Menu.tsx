@@ -42,7 +42,7 @@ function Menu({ items, irParaOSite }: Props) {
             <div className="p-[9px] px-[24px] rounded-[4px] bg-white">
               <a 
                 href={irParaOSite}
-                className="rounded-lg"
+                className="rounded-lg text-transparent bg-clip-text bg-gradient-to-b from-pink-600 to bg-purple-600"
               >
                 IR PARA O SITE
               </a>
