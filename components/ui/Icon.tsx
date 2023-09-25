@@ -24,6 +24,7 @@ export type AvailableIcons =
   | "MagnifyingGlass"
   | "Mastercard"
   | "Message"
+  | "paper-plane-top"
   | "Phone"
   | "Pix"
   | "Plus"
