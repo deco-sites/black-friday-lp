@@ -20,6 +20,7 @@ export interface Props {
    */
   children?: ComponentChildren;
   platform: ReturnType<typeof usePlatform>;
+  irParaOSite: string;
 }
 
 const Aside = (
@@ -52,7 +53,7 @@ const Aside = (
   </div>
 );
 
-function Drawers({ menu, searchbar, children, platform }: Props) {
+function Drawers({ menu, searchbar, children, platform, irParaOSite }: Props) {
   const { displayCart, displayMenu, displaySearchDrawer } = useUI();
 
   return (
@@ -70,7 +71,7 @@ function Drawers({ menu, searchbar, children, platform }: Props) {
           }}
           title={displayMenu.value ? "Menu" : "Buscar"}
         >
-          {displayMenu.value && <Menu {...menu} />}
+          {displayMenu.value && <Menu {...menu} irParaOSite={irParaOSite} />}
           {displaySearchDrawer.value && <Searchbar {...searchbar} />}
         </Aside>
       }
