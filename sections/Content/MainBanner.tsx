@@ -1,5 +1,6 @@
 import Layout from "$store/components/LandingPage/Layout.tsx";
 import Image from "apps/website/components/Image.tsx";
+import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
 import GradientButton from "$store/components/LandingPage/GradientButton.tsx";
 
 export interface Props {
@@ -8,7 +9,7 @@ export interface Props {
   content?: string;
   buttonText: string;
   buttonLink: string;
-  image: string;
+  image: LiveImage;
   alt?: string;
   /**
    * @format color
@@ -40,7 +41,7 @@ export default function MainBanner({backgroundColor, textColor, title, caption, 
         </div>
           <Image
             width={486} 
-            height={523}
+            height={423}
             src={image}
             alt={alt}
             className="m-auto mt-6 md:mt-0"
