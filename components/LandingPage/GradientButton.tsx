@@ -1,6 +1,6 @@
 export interface Props {
   text: string;
-  href: string
+  href: string;
 }
 
 export default function GradientButton({text, href}: Props) {
