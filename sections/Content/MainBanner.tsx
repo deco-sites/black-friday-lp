@@ -36,7 +36,7 @@ export default function MainBanner({backgroundColor, textColor, title, caption, 
             {content}
           </p>
           <div>
-            <GradientButton text={buttonText} href={buttonLink} />
+            <GradientButton text={buttonText} href={buttonLink} backgroundColor={backgroundColor}/>
           </div>
         </div>
           <Image
