@@ -19,7 +19,7 @@ export interface Props {
   textColor: string;
 }
 
-export default function Benefits ({benefits, backgroundColor, textColor}:Props) {
+export default function BenefitsLp ({benefits, backgroundColor, textColor}:Props) {
   <Layout backgroundColor={backgroundColor} textColor={textColor}>
     <h1>Test</h1>
   </Layout>
