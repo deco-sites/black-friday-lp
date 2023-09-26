@@ -22,22 +22,22 @@ export interface Props {
 }
 
 export default function BenefitsLp ({benefits, backgroundColor, textColor}:Props) {
-  console.log("test");
-  console.log(benefits);
   return (
     <Layout backgroundColor={backgroundColor} textColor={textColor}>
-      {benefits.map((b) => (
-        <div>
-          <Image
-            width={54} 
-            height={54}
-            src={b.icon}
-            alt={b.alt}
-          />
-          <h1>{b.title}</h1>
-          <p>{b.description}</p>
-        </div>
-      ))}
+      <div className="flex justify-between align-middle flex-wrap py-20 gap-10">
+        {benefits.map((b) => (
+          <div className="w-[373px] flex flex-col gap-4">
+            <Image
+              width={54} 
+              height={54}
+              src={b.icon}
+              alt={b.alt}
+            />
+            <h1>{b.title}</h1>
+            <p>{b.description}</p>
+          </div>
+        ))}
+      </div>
     </Layout>
   )
 }
