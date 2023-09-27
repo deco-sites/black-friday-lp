@@ -5,6 +5,7 @@ import SliderJS from "$store/islands/SliderJS.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import Layout from "$store/components/LandingPage/Layout.tsx";
 import { useId } from "$store/sdk/useId.ts";
+import TestimonialCard from "$store/components/LandingPage/TestimonialCard.tsx";
 
 export interface Testimonial {
   text: string;
@@ -54,17 +55,11 @@ export default function TestimonialsLp ({title, testimonials, backgroundColor, t
               index={index}
               className="carousel-item"
             >
-              <div className="w-96">
-                <p>{text}</p>
-                <div>
-                  <Image 
-                    height={64}
-                    width={64}
-                    src={customerPic}
-                  />
-                  <label>{customerName}</label>
-                </div>
-              </div>
+              <TestimonialCard 
+                text={text}
+                customerPic={customerPic}
+                customerName={customerName}
+              />
             </Slider.Item>
           ))}
         </Slider>
