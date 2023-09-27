@@ -60,10 +60,6 @@ export default function TestimonialsLp ({title, testimonials, backgroundColor, t
                 customerPic={customerPic}
                 customerName={customerName}
               />
-              {/* <div className="relative h-[300px] w-[300px]">
-                <div className="absolute z-50 h-[300px] w-[300px]">
-                </div>
-              </div> */}
             </Slider.Item>
           ))}
         <div className="w-full h-[362px] absolute z-[-30]">
