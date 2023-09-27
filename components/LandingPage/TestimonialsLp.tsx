@@ -29,10 +29,10 @@ export interface Props {
 export default function TestimonialsLp ({title, testimonials, backgroundColor, textColor} :Props) {
   const id = useId();
   return (
-    <div>
+    <div className="relative wd-full z-50">
       <div id={id}>
         <Layout backgroundColor={backgroundColor} textColor={textColor}>
-          <div className="flex justify-between">
+          <div className="flex justify-between mt-8">
             <h1 className="text-3xl font-semibold">{title}</h1>
             <div className="w-32 h-12 flex justify-between">
               <div class="hidden relative sm:block z-10 col-start-1 row-start-3">
@@ -60,13 +60,19 @@ export default function TestimonialsLp ({title, testimonials, backgroundColor, t
                 customerPic={customerPic}
                 customerName={customerName}
               />
+              {/* <div className="relative h-[300px] w-[300px]">
+                <div className="absolute z-50 h-[300px] w-[300px]">
+                </div>
+              </div> */}
             </Slider.Item>
           ))}
+        <div className="w-full h-[362px] absolute z-[-30]">
+          <div className="w-[95%] bg-gradient-to-b  from-pink-600 to-purple-600 h-[362px] m-auto rounded-2xl">
+          </div>
+        </div>
         </Slider>
       </div>
     </div>
-    // <div className="w-full bg-gradient-to-b  from-pink-600 to-purple-600 h-[300px]">
-      
-    // </div>
+    
   );
 }
