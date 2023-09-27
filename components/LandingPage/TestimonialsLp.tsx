@@ -36,12 +36,12 @@ export default function TestimonialsLp ({title, testimonials, backgroundColor, t
             <div className="w-32 h-12 flex justify-between">
               <div class="hidden relative sm:block z-10 col-start-1 row-start-3">
                 <Slider.PrevButton class="btn btn-circle btn-outline absolute right-2/2 bg-base-100">
-                  <Icon size={24} id="ChevronLeft" strokeWidth={3} />
+                  <Icon size={24} id="ChevronLeftLp" strokeWidth={3} />
                 </Slider.PrevButton>
               </div>
               <div class="hidden relative sm:block z-10 col-start-3 row-start-3">
                 <Slider.NextButton class="btn btn-circle btn-outline absolute left-[-48px] bg-base-100">
-                  <Icon size={24} id="ChevronRight" strokeWidth={3} />
+                  <Icon size={24} id="ChevronRightLp" strokeWidth={3} />
                 </Slider.NextButton>
               </div>
             </div>
