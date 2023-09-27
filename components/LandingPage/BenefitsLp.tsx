@@ -24,10 +24,9 @@ export interface Props {
 export default function BenefitsLp ({benefits, backgroundColor, textColor}:Props) {
   return (
     <Layout backgroundColor={backgroundColor} textColor={textColor}>
-      {/* <div className="flex justify-between flex-wrap py-20 gap-10"> */}
-      <div className="flex overflow-x-auto justify-between sm:flex-wrap sm:py-20 gap-10">
+      <div className="flex carousel justify-between sm:flex-wrap sm:py-20 gap-10">
         {benefits.map((b) => (
-          <div className="w-10/12 sm:w-[373px] flex flex-col gap-4 shrink-0">
+          <div className="w-10/12 sm:w-[373px] flex flex-col gap-4 shrink-0 carousel-item">
             <Image
               width={54} 
               height={54}
