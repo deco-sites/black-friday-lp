@@ -13,7 +13,6 @@ import * as $$$$$$6 from "./sections/Content/NewsLetter.tsx";
 import * as $$$$$$7 from "./sections/Content/Testimonials.tsx";
 import * as $$$$$$8 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$9 from "./sections/Header/Header.tsx";
-import * as $$$$$$10 from "./sections/Header/LandingHeader.tsx";
 import * as $$$$$$11 from "./sections/Images/BannerGrid.tsx";
 import * as $$$$$$12 from "./sections/Images/Carousel.tsx";
 import * as $$$$$$13 from "./sections/Images/ImageGallery.tsx";
@@ -48,7 +47,6 @@ const manifest = {
     "deco-sites/black-friday-lp/sections/Content/Testimonials.tsx": $$$$$$7,
     "deco-sites/black-friday-lp/sections/Footer/Footer.tsx": $$$$$$8,
     "deco-sites/black-friday-lp/sections/Header/Header.tsx": $$$$$$9,
-    "deco-sites/black-friday-lp/sections/Header/LandingHeader.tsx": $$$$$$10,
     "deco-sites/black-friday-lp/sections/Images/BannerGrid.tsx": $$$$$$11,
     "deco-sites/black-friday-lp/sections/Images/Carousel.tsx": $$$$$$12,
     "deco-sites/black-friday-lp/sections/Images/ImageGallery.tsx": $$$$$$13,
