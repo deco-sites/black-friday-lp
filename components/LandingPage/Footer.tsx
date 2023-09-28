@@ -43,10 +43,16 @@ export interface Props {
       href?: string;
     }[];
   };
+
+  logos?: {
+    alt: string;
+    src: LiveImage;
+    href: string;
+  }[]
 }
 
 function Footer(
-  { section, social, payments, backgroundColor, textColor, extraLinks }: Props,
+  { section, social, payments, backgroundColor, textColor, extraLinks, logos }: Props,
 ) {
   return (
     <Layout backgroundColor={backgroundColor} textColor={textColor}>
@@ -117,6 +123,15 @@ function Footer(
           ))}
         </div>
       </div>
+      <ul class="flex justify-start flex-wrap gap-4">
+      {logos?.map((item) => (
+          <li>
+            <a href={item.href} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.alt} max-height="120px" />
+            </a>
+          </li>
+        ))}
+      </ul>
     </Layout>
   );
 }
