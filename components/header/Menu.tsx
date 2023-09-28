@@ -1,14 +1,16 @@
 import Icon from "$store/components/ui/Icon.tsx";
 import type { INavItem } from "./NavItem.tsx";
+import GradientButton from "$store/components/LandingPage/GradientButton.tsx";
 
 export interface Props {
   items: INavItem[];
+  irParaOSite: string;
 }
 
 function MenuItem({ item }: { item: INavItem }) {
   return (
     <div class="collapse collapse-plus">
-      <input type="checkbox" />
+      {/* <input type="checkbox" />
       <div class="collapse-title">{item.label}</div>
       <div class="collapse-content">
         <ul>
@@ -21,12 +23,13 @@ function MenuItem({ item }: { item: INavItem }) {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
+      <a class="p-5" href={item.href}>{item.label}</a>
     </div>
   );
 }
 
-function Menu({ items }: Props) {
+function Menu({ items, irParaOSite }: Props) {
   return (
     <div class="flex flex-col h-full">
       <ul class="px-4 flex-grow flex flex-col divide-y divide-base-200">
@@ -35,6 +38,9 @@ function Menu({ items }: Props) {
             <MenuItem item={item} />
           </li>
         ))}
+        <li>
+          <GradientButton text="IR PARA O SITE" href={irParaOSite} />
+        </li>
       </ul>
 
       <ul class="flex flex-col py-2 bg-base-200">

@@ -24,25 +24,28 @@ function CartButton({ loading, currency, total, items }: Props) {
   };
 
   return (
-    <div class="indicator">
-      <span
-        class={`indicator-item badge badge-secondary badge-sm ${
-          totalItems === 0 ? "hidden" : ""
-        }`}
-      >
-        {totalItems > 9 ? "9+" : totalItems}
-      </span>
+    <>
+      <div class="indicator">
+        <span
+          class={`indicator-item badge badge-secondary badge-sm ${
+            totalItems === 0 ? "hidden" : ""
+          }`}
+        >
+          {totalItems > 9 ? "9+" : totalItems}
+        </span>
 
-      <Button
-        class="btn-circle btn-sm btn-ghost"
-        aria-label="open cart"
-        data-deco={displayCart.value && "open-cart"}
-        loading={loading}
-        onClick={onClick}
-      >
-        <Icon id="ShoppingCart" size={24} strokeWidth={2} />
-      </Button>
-    </div>
+        <Button
+          class="btn-circle btn-sm btn-ghost"
+          aria-label="open cart"
+          data-deco={displayCart.value && "open-cart"}
+          loading={loading}
+          onClick={onClick}
+        >
+          <Icon id="ShoppingCart" size={24} strokeWidth={2} />
+        </Button>
+        
+      </div>
+    </>
   );
 }
 

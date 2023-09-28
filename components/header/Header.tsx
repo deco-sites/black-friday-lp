@@ -6,6 +6,7 @@ import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
+import Layout from "$store/components/LandingPage/Layout.tsx";
 
 export interface NavItem {
   label: string;
@@ -47,6 +48,7 @@ export interface Props {
 
   /** @title Logo */
   logo?: { src: ImageWidget; alt: string };
+  irParaOSite: string;
 }
 
 function Header({
@@ -56,6 +58,7 @@ function Header({
   navItems = [],
   suggestions,
   logo,
+  irParaOSite,
 }: Props) {
   const platform = usePlatform();
   const searchbar = { ..._searchbar, products, suggestions };
@@ -64,13 +67,14 @@ function Header({
     <>
       <header style={{ height: headerHeight }}>
         <Drawers
-          menu={{ items: navItems }}
+          menu={{ items: navItems, irParaOSite }}
           searchbar={searchbar}
           platform={platform}
+          irParaOSite={irParaOSite}
         >
           <div class="bg-base-100 fixed w-full z-50">
             <Alert alerts={alerts} />
-            <Navbar items={navItems} searchbar={searchbar} logo={logo} />
+            <Navbar items={navItems} searchbar={searchbar} logo={logo} irParaOSite={irParaOSite} />
           </div>
         </Drawers>
       </header>

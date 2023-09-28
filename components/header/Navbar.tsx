@@ -11,11 +11,13 @@ import { usePlatform } from "$store/sdk/usePlatform.tsx";
 import type { INavItem } from "./NavItem.tsx";
 import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
+import GradientButton from "$store/components/LandingPage/GradientButton.tsx";
 
-function Navbar({ items, searchbar, logo }: {
+function Navbar({ items, searchbar, logo, irParaOSite }: {
   items: INavItem[];
   searchbar: SearchbarProps;
   logo?: { src: string; alt: string };
+  irParaOSite: string;
 }) {
   const platform = usePlatform();
 
@@ -40,14 +42,14 @@ function Navbar({ items, searchbar, logo }: {
         )}
 
         <div class="flex gap-1">
-          <SearchButton />
+          {/* <SearchButton /> */}
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
         </div>
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
+      <div class="hidden md:flex flex-row justify-between items-center m-auto mt-3 w-11/12">
         <div class="flex-none w-44">
           {logo && (
             <a
@@ -59,10 +61,19 @@ function Navbar({ items, searchbar, logo }: {
             </a>
           )}
         </div>
-        <div class="flex-auto flex justify-center">
+        <div class="flex-auto flex justify-end">
           {items.map((item) => <NavItem item={item} />)}
+          <div>
+            <GradientButton text="IR PARA O SITE" href={irParaOSite} />
+          </div>
+          <div className="ml-4 pt-2">
+            {platform === "vtex" && <CartButtonVTEX />}
+            {platform === "vnda" && <CartButtonVDNA />}
+            {platform === "wake" && <CartButtonWake />}
+            {platform === "shopify" && <CartButtonShopify />}
+          </div>
         </div>
-        <div class="flex-none w-44 flex items-center justify-end gap-2">
+        {/* <div class="flex-none w-44 flex items-center justify-end gap-2">
           <SearchButton />
           <Searchbar searchbar={searchbar} />
           <a
@@ -88,7 +99,7 @@ function Navbar({ items, searchbar, logo }: {
           {platform === "vnda" && <CartButtonVDNA />}
           {platform === "wake" && <CartButtonWake />}
           {platform === "shopify" && <CartButtonShopify />}
-        </div>
+        </div> */}
       </div>
     </>
   );
