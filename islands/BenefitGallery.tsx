@@ -2,6 +2,7 @@ import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
 import Layout from "$store/components/LandingPage/Layout.tsx";
 import { useState } from 'preact/hooks';
+import { stringToBase64SHA256 } from "deco/deps.ts";
 
 export interface BenefitButton {
   icon: LiveImage;
@@ -25,18 +26,22 @@ export interface Props {
 
 export default function BenefitGallery({title, content, benefitButtons, backgroundColor, textColor}: Props) {
   const [selectedImage, setSeletctedImage] = useState(benefitButtons[0].image);
+  const [selectedButton, setSelectedButton] = useState(0);
   const buttonClass = "block w-[100%] flex gap-4 p-4 rounded justify-between";
-  const selectedButtonClass = "block w-[100%] flex gap-4 p-4 shadow-md rounded justify-between";
+  const selectedButtonClass = "block w-[100%] flex gap-4 p-4 rounded justify-between shadow-md";
   return (
     <Layout backgroundColor={backgroundColor} textColor={textColor}>
       <h1 className="text-3xl font-semibold">{title}</h1>
       <p>{content}</p>
       <div className="flex justify-between">
         <div className="flex-col gap-4">
-          {benefitButtons.map(({icon, text, image}: BenefitButton) => (
+          {benefitButtons.map(({icon, text, image}: BenefitButton, index) => (
             <button 
-              className={selectedButtonClass}
-              onClick={() => { setSeletctedImage(image) }}
+              className={selectedButton == index ? selectedButtonClass : buttonClass}
+              onClick={(e) => { 
+                setSeletctedImage(image);
+                setSelectedButton(index);
+              }}
             >
               <Image 
                 height={23}
@@ -52,6 +57,7 @@ export default function BenefitGallery({title, content, benefitButtons, backgrou
         </div>
         <Image 
           width={906}
+          height={556}
           src={selectedImage}
         />
       </div>
