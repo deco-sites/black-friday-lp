@@ -90,4 +90,15 @@
 <path d="M4.89648 6.17188H12.2207L2.9043 2.1875L4.89648 6.17188ZM4.89648 7.57812L2.9043 11.5918L12.2207 7.57812H4.89648ZM2.28906 0.400391L15.4141 6.02539C15.7656 6.17188 16 6.52344 16 6.9043C16 7.25586 15.7656 7.60742 15.4141 7.75391L2.28906 13.3789C1.9375 13.5254 1.49805 13.4375 1.23438 13.1445C0.970703 12.8809 0.912109 12.4414 1.08789 12.0898L3.69531 6.875L1.08789 1.68945C0.912109 1.33789 0.970703 0.898438 1.23438 0.605469C1.49805 0.341797 1.9375 0.253906 2.28906 0.400391Z" fill="white"/>
 </symbol>
 
+	<svg id="ChevronRightLp" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M6 12H18.5H6ZM18.5 12L12.5 6L18.5 12ZM18.5 12L12.5 18L18.5 12Z" fill="#1E1E1E"/>
+		<path d="M18.5 12L12.5 18M6 12H18.5H6ZM18.5 12L12.5 6L18.5 12Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	</svg>
+
+	<symbol id="ChevronLeftLp" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M18.5 12H6H18.5ZM6 12L12 6L6 12ZM6 12L12 18L6 12Z" fill="#1E1E1E"/>
+		<path d="M6 12L12 18M18.5 12H6H18.5ZM6 12L12 6L6 12Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+
+
 </svg>
