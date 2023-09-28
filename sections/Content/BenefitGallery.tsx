@@ -1,1 +1,1 @@
-export { default } from "$store/components/LandingPage/BenefitGallery.tsx";
+export { default } from "$store/islands/BenefitGallery.tsx";
