@@ -26,6 +26,7 @@ export interface Layout {
     installments?: boolean;
     skuSelector?: boolean;
     cta?: boolean;
+    oldPrice?: boolean;
   };
   onMouseOver?: {
     image?: "Change image" | "Zoom image";
@@ -95,7 +96,7 @@ function ProductCard(
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn btn-block bg-gradient-to-r from-teal-400 to-sky-400 border-none"
     >
       {l?.basics?.ctaText || "Ver produto"}
     </a>
@@ -110,8 +111,7 @@ function ProductCard(
         ${
         l?.onMouseOver?.card === "Move up" &&
         "duration-500 transition-translate ease-in-out lg:hover:-translate-y-2"
-      }
-      `}
+      }`}
       data-deco="view-product"
     >
       <SendEventOnClick
@@ -131,7 +131,7 @@ function ProductCard(
         }}
       />
       <figure
-        class="relative overflow-hidden"
+        class="relative overflow-hidden rounded-t-2xl"
         style={{ aspectRatio: `${WIDTH} / ${HEIGHT}` }}
       >
         {/* Wishlist button */}
@@ -209,7 +209,7 @@ function ProductCard(
         </figcaption>
       </figure>
       {/* Prices & Name */}
-      <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-4">
+      <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-4  bg-[#303030] rounded-b-2xl">
         {/* SKU Selector */}
         {(!l?.elementsPositions?.skuSelector ||
           l?.elementsPositions?.skuSelector === "Top") && (
@@ -232,14 +232,8 @@ function ProductCard(
             <div class="flex flex-col gap-0">
               {l?.hide?.productName ? "" : (
                 <h2
-                  class="truncate text-base lg:text-lg text-base-content"
+                  class="truncate text-base lg:text-lg text-white"
                   dangerouslySetInnerHTML={{ __html: name ?? "" }}
-                />
-              )}
-              {l?.hide?.productDescription ? "" : (
-                <div
-                  class="truncate text-sm lg:text-sm text-neutral"
-                  dangerouslySetInnerHTML={{ __html: description ?? "" }}
                 />
               )}
             </div>
@@ -253,15 +247,22 @@ function ProductCard(
                   : ""
               } ${align === "center" ? "justify-center" : "justify-start"}`}
             >
-              <div
-                class={`line-through text-base-300 text-xs ${
-                  l?.basics?.oldPriceSize === "Normal" ? "lg:text-xl" : ""
-                }`}
-              >
-                {formatPrice(listPrice, offers?.priceCurrency)}
-              </div>
-              <div class="text-accent text-base lg:text-xl">
+              {l?.hide?.oldPrice ? "" : (
+                <div
+                  class={`line-through text-base-300 text-xs ${
+                    l?.basics?.oldPriceSize === "Normal" ? "lg:text-xl" : ""
+                  }`}
+                >
+                  {formatPrice(listPrice, offers?.priceCurrency)}
+                </div>
+              )}
+              <div class="flex justify-start gap-4 text-base lg:text-2xl items-center text-white font-semibold">
                 {formatPrice(price, offers?.priceCurrency)}
+                {listPrice && price && (
+                  <p class="bg-red-600 bg-opacity-100 text-white font-semibold px-4 py-1 rounded-2xl">
+                    {`${Math.floor(((listPrice - price) / listPrice) * 100)}%`}
+                  </p>
+                )}
               </div>
             </div>
             {l?.hide?.installments
@@ -272,6 +273,13 @@ function ProductCard(
                 </div>
               )}
           </div>
+        )}
+
+        {l?.hide?.productDescription ? "" : (
+          <div
+            class="truncate text-white text-opacity-75"
+            dangerouslySetInnerHTML={{ __html: description ?? "" }}
+          />
         )}
 
         {/* SKU Selector */}

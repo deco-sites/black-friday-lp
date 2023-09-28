@@ -4,6 +4,7 @@ interface Props {
   description?: string;
   alignment: "center" | "left";
   colorReverse?: boolean;
+  color?: string;
 }
 
 function Header(props: Props) {
@@ -27,6 +28,7 @@ function Header(props: Props) {
                   }
                   ${props.fontSize === "Normal" ? "lg:text-3xl" : "lg:text-4xl"}
                 `}
+                style={{color: (props.color ?? "white")}}
                 >
                   {props.title}
                 </h1>

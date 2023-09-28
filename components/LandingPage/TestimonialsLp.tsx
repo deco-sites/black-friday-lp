@@ -29,7 +29,7 @@ export interface Props {
 export default function TestimonialsLp ({title, testimonials, backgroundColor, textColor} :Props) {
   const id = useId();
   return (
-    <div className="relative wd-full z-50">
+    <div className="relative wd-full z-10">
       <div id={id}>
         <Layout backgroundColor={backgroundColor} textColor={textColor}>
           <div className="flex justify-between mt-8">
